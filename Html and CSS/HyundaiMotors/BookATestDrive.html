@@ -5,7 +5,7 @@
 <style>
 body{
 font-family: 'Playball', cursive;
-background-image: url('file:///C:/Program%20Files/Apache%20Software%20Foundation/Tomcat%2010.0/webapps/Project1/Assests/cars1.png');
+background-image: url('Assests/cars1.png');
 background-repeat: no-repeat;
 background-size: cover;
 }
@@ -105,9 +105,9 @@ font-size:50px;
 <script>
 function validate()
 {
-var contact=document.getElementById("con").value;
+var mobile=document.getElementById("mobile_number").value;
 
-if(contact.length!=10)
+if(mobile.length!=10)
 {
 alert("Invalid Contact Number");
 return false;
@@ -120,13 +120,13 @@ return true;
 <body>
 	<header class="header">
 		<div class="left">
-			<img src="file:///C:/Program%20Files/Apache%20Software%20Foundation/Tomcat%2010.0/webapps/Project1/Assests/Hyundai-logo.png" alt="">
+			<img src="Assests/Hyundai-logo.png" alt="">
 		</div>
 		<div class="mid">
 			<ul class="navbar">
-				<li><a href="file:///C:/Program%20Files/Apache%20Software%20Foundation/Tomcat%2010.0/webapps/Project1/index.html">Home</a></li>
-				<li><a href="file:///C:/Program%20Files/Apache%20Software%20Foundation/Tomcat%2010.0/webapps/Project1/UpcomingCars.html">Upcoming Cars</a></li>
-				<li><a href="file:///C:/Program%20Files/Apache%20Software%20Foundation/Tomcat%2010.0/webapps/Project1/BookATestDrive.html">Book a Test Drive</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="UpcomingCars.html">Upcoming Cars</a></li>
+				<li><a href="BookATestDrive.html">Book a Test Drive</a></li>
 				<li><a href="#">About Us</a></li>
 </ul>
 </div>
@@ -139,18 +139,18 @@ return true;
 
 <div class="container">
         <h1>Booking For Test Drive</h1>
-        <form name=f1 method=post action=abc.jsp onsubmit="return validate()">
+        <form name=f1 method=get action=abc.jsp onsubmit="return validate()">
             <div class="form-group">
-                <input type="text" name="" placeholder="Enter Your Name">
+                <input type="text" name=name placeholder="Enter Your Name" required>
             </div>
             <div class="form-group">
-                <input type="text" name="" placeholder="Enter Your Place">
+                <input type="text" name=place placeholder="Enter Your Place" required>
             </div>
             <div class="form-group">
-                <input type="text" name="" placeholder="Enter Your Gender">
+                <input type="text" name=gender placeholder="Enter Your Gender" required>
             </div>
             <div class="form-group">
-                <input type="text" name="" placeholder="Enter Your Contact Number">
+                <input type="text" name=mobile_number id= mobile_number placeholder="Enter Your Contact Number" required>
             </div>
             <button class="btn">Submit</button>
         </form>
